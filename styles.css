@@ -93,6 +93,16 @@ span {
 }
 
 .stats h2 {
-  color: #0e0e0e;
+  color: #222222;
   font-size: 2rem;
+}
+
+.footer {
+  width: 80%;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #353535;
 }
