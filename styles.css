@@ -35,3 +35,35 @@ span {
 .bold-text {
   font-weight: bold;
 }
+
+.board {
+  width: 80%;
+  max-width: 80rem;
+  background-color: dodgerblue;
+  margin: 0 auto;
+  min-height: 35rem;
+  display: flex;
+  transform: translateY(-3rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* .stats {
+  background-color: crimson;
+  flex-grow: 1;
+} */
+
+.text {
+  flex-grow: 2;
+}
+
+.text-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 2rem;
+  resize: none;
+  font-size: 1.6rem;
+}
