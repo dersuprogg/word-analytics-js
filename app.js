@@ -5,7 +5,8 @@ const inputField = document.querySelector(".text-input");
 
 // HELPER FUNCTIONS
 const countChars = function (str) {
-  return str.split("").length;
+  const filteredStr = str.split("").filter((char) => char !== "\n");
+  return filteredStr.length;
 };
 
 inputField.addEventListener("keyup", () => {
