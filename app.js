@@ -38,3 +38,8 @@ inputField.addEventListener("keyup", () => {
   const chars = countChars(inputField.value);
   twitterLimit.textContent = 280 - chars;
 });
+
+inputField.addEventListener("keyup", () => {
+  const chars = countChars(inputField.value);
+  facebookLimit.textContent = 2200 - chars;
+});
