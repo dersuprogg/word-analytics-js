@@ -110,3 +110,31 @@ span {
 h2.limit-exceed {
   color: #cc183c;
 }
+
+@media (max-width: 500px) {
+  .header {
+    padding: 3.6rem 1.2rem;
+  }
+  .header h1 {
+    font-size: 4rem;
+  }
+
+  .board {
+    flex-direction: column;
+    min-height: 45rem;
+  }
+  .text-input {
+    display: block;
+    flex-grow: 1;
+  }
+  .text {
+    flex-grow: 3;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats {
+    flex-grow: 1;
+  }
+}
