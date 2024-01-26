@@ -11,11 +11,19 @@ inputField.addEventListener("input", () => {
   const twitterCharsLeft = 280 - chars;
   const facebookCharsLeft = 2200 - chars;
 
+  if (twitterCharsLeft < 0) {
+    twitterLimit.classList.add("limit-exceed");
+  } else {
+    twitterLimit.classList.remove("limit-exceed");
+  }
+
+  if (facebookCharsLeft < 0) {
+    facebookLimit.classList.add("limit-exceed");
+  } else {
+    facebookLimit.classList.remove("limit-exceed");
+  }
+
   charCount.textContent = chars;
   twitterLimit.textContent = twitterCharsLeft;
   facebookLimit.textContent = facebookCharsLeft;
-});
-
-inputField.addEventListener("input", () => {
-  wordCount.textContent = countWords(inputField.value);
 });
