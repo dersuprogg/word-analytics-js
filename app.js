@@ -9,10 +9,22 @@ const countChars = function (str) {
   return filteredStr.length;
 };
 
+const countWords = function (str) {
+  if (str !== "") {
+    return str.trim().split(" ").length;
+  } else {
+    return 0;
+  }
+};
+
 inputField.addEventListener("keyup", () => {
   charCount.textContent = countChars(inputField.value);
 });
 
 inputField.addEventListener("paste", () => {
   charCount.textContent = countChars(inputField.value);
+});
+
+inputField.addEventListener("keyup", () => {
+  wordCount.textContent = countWords(inputField.value);
 });
