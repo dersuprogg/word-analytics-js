@@ -2,7 +2,8 @@
 const wordCount = document.querySelector(".word-count");
 const charCount = document.querySelector(".char-count");
 const inputField = document.querySelector(".text-input");
-
+const twitterLimit = document.querySelector(".twitter-count");
+const facebookLimit = document.querySelector(".facebook-count");
 // HELPER FUNCTIONS
 const countChars = function (str) {
   const filteredStr = str.split("").filter((char) => char !== "\n");
@@ -27,4 +28,9 @@ inputField.addEventListener("paste", () => {
 
 inputField.addEventListener("keyup", () => {
   wordCount.textContent = countWords(inputField.value);
+});
+
+inputField.addEventListener("keyup", () => {
+  const chars = countChars(inputField.value);
+  twitterLimit.textContent = 280 - chars;
 });
