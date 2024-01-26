@@ -24,6 +24,10 @@ inputField.addEventListener("keyup", () => {
 
 inputField.addEventListener("paste", () => {
   charCount.textContent = countChars(inputField.value);
+
+  const chars = countChars(inputField.value);
+  twitterLimit.textContent = 280 - chars;
+  facebookLimit.textContent = 2200 - chars;
 });
 
 inputField.addEventListener("keyup", () => {
