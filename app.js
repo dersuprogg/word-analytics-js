@@ -6,7 +6,10 @@ const twitterLimit = document.querySelector(".twitter-count");
 const facebookLimit = document.querySelector(".facebook-count");
 
 inputField.addEventListener("input", () => {
-  const words = inputField.value.trim().split(" ").length;
+  let words = inputField.value.trim().split(" ").length;
+  if (inputField.value.length === 0) {
+    words = 0;
+  }
   const chars = inputField.value.length;
   const twitterCharsLeft = 280 - chars;
   const facebookCharsLeft = 2200 - chars;
