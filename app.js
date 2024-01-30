@@ -7,9 +7,8 @@ const facebookLimit = document.querySelector(".facebook-count");
 
 inputField.addEventListener("input", () => {
   let wordsArray = inputField.value.trim().split(" ");
-  let words = wordsArray.filter((word) => {
-    return word !== "";
-  }).length;
+  let words = wordsArray.filter((word) => word !== "").length;
+
   if (inputField.value.length === 0) {
     words = 0;
   }
